@@ -44,7 +44,59 @@ button {
 }
 #text {
 	text-align-last: center;
+	border: solid black;
+    border-radius: 34%;
+    margin: 1em;
 }
 #text p{
 	font-size: 50px;
+}
+#Grupper {
+	    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+	text-align-last: center;
+}
+.gruppe1 {
+	width: 100%;
+    padding: 1em;
+    margin-left: 3em;
+    border: lightblue;
+    margin: 1em;
+}
+.gruppe2 {
+	width: 100%;
+    padding: 1em;
+    margin-left: 3em;
+    border: lightblue;
+    margin: 1em;
+}
+.gruppe3 {
+	width: 100%;
+    padding: 1em;
+    margin-left: 3em;
+    border: lightblue;
+    margin: 1em;
+}
+.gruppe4 {
+	width: 100%;
+    padding: 1em;
+    margin-left: 3em;
+    border: lightblue;
+    margin: 1em;
+}
+.gruppe4, .gruppe3, .gruppe1, .gruppe2{
+    width: 75%;
+    padding: 2em;
+    margin-left: 1em;
+    border: lightblue;
+    border-width: medium;
+    background-color: cornflowerblue;
+    font-size: 3em;
+}
+#Grupper h2{
+	width: 100%;
+	font-size: 5em;
 }
