@@ -12,11 +12,38 @@
 				<h2> <a href="grupper.html">Grupper</a></h2>
 			</div>
 			<div class="nav2">
-				<h2><a href="studybuddy.html">Swipe</a></h2>
+				<h2><a>Min Profil</a></h2>
+				<!-- Tanken er å gjere det sånn at felta berre viser etter at ein har trykt ein av valga. Har berre ikkje fått det til å fungere endo -->
+				<h2><a button type="button"> Endre Passord</a></h2>
+				<div id="text" class="passchange">
+					<h2 >Gammelt Passord</h2>
+					<input type="text" name="oldpass">
+					<br></br>
+					<h2 input type="text">Nytt Passord</h2>
+					<input type="text" name="newpass">
+					<br></br>
+				</div>
+				<h2><a button type="button"> Endre Profilbilde</a></h2>
+					<input type="file" name="profilepic" accept="image/*">
+				<h2><a button type="button"> Rediger Biografi</a></h2>
+				<div class="biografi" style="">
+					<textarea name="biografi" rows="15" cols="80"></textarea>
+				</div>
 			</div>
 			<div class="nav3">
-				<h2><a href="minprofil.html">Min profil</a></h2>
+				<h2><a href="studybuddy.html">Swipe</a></h2>
 			</div>
+
 	</nav>
 </body>
+<!-- Ignorer dette. Gjer ikkje noko per no. -->
+<!-- // function passchangefunc() {
+// 	var x = document.getElementById("passchange");
+// 	if (x.style.display === "none") {
+// 		x.style.display = "block";
+// 	} else {
+// 		x.style.display = "none";
+// 	}
+// }
+// -->
 </html>
