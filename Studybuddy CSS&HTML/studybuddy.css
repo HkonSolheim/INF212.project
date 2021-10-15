@@ -11,18 +11,17 @@ nav {
     margin: 0;
     justify-content: space-around;
     font-size: 30px;
+    font-family: 'Bitter', serif;
 }
 a {
 	text-decoration: none;
 	color: black;
 }
-#picture {
-	    text-align-last: center;
-}
 img[src="noimage.png"] {
-	    background-size: cover;
+	background-size: cover;
     align-content: center;
     width: 800px;
+    height: 1194px;
 }
 #valg {
 	display: flex;
@@ -42,19 +41,35 @@ button {
 	font-size: 30px;
 	border-radius: 50%;
 }
-#text {
-	text-align-last: center;
-	border: solid black;
-    border-radius: 34%;
-    margin: 1em;
+#picture {
+        text-align-last: center;
+        position: relative;
 }
-#text p{
-	font-size: 50px;
+.text {
+    display: flex;
+    text-align-last: center;
+    margin: 1em;
+    font-family: 'Bitter', serif;
+    position: absolute;
+    /* top: 512px; */
+    font-size: 5em;
+    /* justify-content: left; */
+    border-left-style: groove;
+    left: 33px;
+    bottom: 169px;
+}
+.textp{
+    font-size: 43px;
+    font-family: 'Bitter', serif;
+    position: absolute;
+    bottom: -27px;
+    left: 115px;
 }
 #Grupper {
 	    display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Bitter', serif;
 }
 h2 {
 	text-align-last: center;
@@ -99,4 +114,13 @@ h2 {
 #Grupper h2{
 	width: 100%;
 	font-size: 5em;
+}
+#logo {
+    display: flex;
+    justify-content: center;
+}
+img[src="studybuddylogo.png"] {
+    max-inline-size: -webkit-fill-available;
+    height: 50%;
+    width: 34%;
 }
