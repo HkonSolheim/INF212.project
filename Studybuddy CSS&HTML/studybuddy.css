@@ -17,17 +17,18 @@ a {
 	text-decoration: none;
 	color: black;
 }
-img[src="noimage.png"] {
+img[src="olanordmann.jpeg"] {
 	background-size: cover;
     align-content: center;
     width: 800px;
-    height: 1194px;
+    height: 900px;
+    padding: 1em;
 }
 #valg {
 	display: flex;
 	flex-flow: row;
 	justify-content: space-around;
-	padding: 2em;
+	padding: 4em;
 }
 .ja {
 	border-radius: 50%;
@@ -59,10 +60,24 @@ button {
     bottom: 169px;
 }
 .textp{
-    font-size: 43px;
+    font-size: 40px;
     font-family: 'Bitter', serif;
     position: absolute;
-    bottom: -27px;
+    bottom: -56px;
+    left: 115px;
+}
+.textp2{
+    font-size: 40px;
+    font-family: 'Bitter', serif;
+    position: absolute;
+    bottom: -101px;
+    left: 115px;
+}
+.textp3{
+    font-size: 40px;
+    font-family: 'Bitter', serif;
+    position: absolute;
+    bottom: -7px;
     left: 115px;
 }
 #Grupper {
@@ -121,6 +136,6 @@ h2 {
 }
 img[src="studybuddylogo.png"] {
     max-inline-size: -webkit-fill-available;
-    height: 50%;
-    width: 34%;
+    height: 25%;
+    width: 18%;
 }
