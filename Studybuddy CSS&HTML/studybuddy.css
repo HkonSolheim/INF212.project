@@ -29,18 +29,32 @@ img[src="olanordmann.jpeg"] {
 	flex-flow: row;
 	justify-content: space-around;
 	padding: 4em;
+    margin-top: 2em;
 }
 .ja {
 	border-radius: 50%;
+    color: white;
+    background-color: green;
+
 }
 .nei {
 	border-radius: 50%;
+    color: white;
+    background-color: red;
 }
 button {
 	height: 100px;
 	width: 100px;
 	font-size: 30px;
 	border-radius: 50%;
+}
+button .ja{
+    color: white;
+    background-color: green;
+}
+button .nei{
+    color: white;
+    background-color: red;
 }
 #picture {
         text-align-last: center;
