@@ -53,11 +53,10 @@ button {
     font-family: 'Bitter', serif;
     position: absolute;
     /* top: 512px; */
-    font-size: 5em;
+    font-size: 4em;
     /* justify-content: left; */
-    border-left-style: groove;
-    left: 33px;
-    bottom: 169px;
+    left: 40px;
+    bottom: 23px;
 }
 .textp{
     font-size: 40px;
