@@ -59,6 +59,7 @@ button .nei{
 #picture {
         text-align-last: center;
         position: relative;
+				transform-origin: 50% 99%;
 }
 .text {
     display: flex;
@@ -151,4 +152,8 @@ img[src="studybuddylogo.png"] {
     max-inline-size: -webkit-fill-available;
     height: 25%;
     width: 18%;
+}
+body{
+   opacity: 0;
+   transition: opacity .5s;
 }

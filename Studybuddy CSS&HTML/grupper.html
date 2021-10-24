@@ -14,13 +14,13 @@
 </div>
 	<nav>
 			<div class="nav1">
-				<h2> <a href="grupper.html">Grupper</a></h2>
+				<h2><span onclick="transitionToPage('minprofil.html')">Min Profil</h2>
 			</div>
 			<div class="nav2">
-				<h2><a href="studybuddy.html">Swipe</a></h2>
+				<h2>Grupper</h2>
 			</div>
 			<div class="nav3">
-				<h2><a href="minprofil.html">Min profil</a></h2>
+				<h2><span onclick="transitionToPage('studybuddy.html')">Swipe</span></h2>
 			</div>
 	</nav>
 		<div id="Grupper">
@@ -42,5 +42,17 @@
 				<p>Deltakere: Ragna, Heidi, Jørgen, Tobias</p>
 			</div>
 		</div>
+<script>
+window.transitionToPage = function(href) {
+	document.querySelector('body').style.opacity = 0
+	setTimeout(function() {
+			window.location.href = href
+	}, 500)
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+	document.querySelector('body').style.opacity = 1
+})
+</script>
 </body>
 </html>
