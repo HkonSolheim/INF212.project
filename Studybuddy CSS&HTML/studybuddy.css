@@ -30,12 +30,19 @@ img[src="olanordmann.jpeg"] {
 	justify-content: space-around;
 	padding: 4em;
     margin-top: 2em;
+	position: absolute;
+	top: 135%;
+	left: 37%;
+}
+.divider {
+	width: 150px;
+	height: auto;
+	display: inline-block;
 }
 .ja {
 	border-radius: 50%;
     color: white;
     background-color: green;
-
 }
 .nei {
 	border-radius: 50%;
@@ -55,47 +62,55 @@ button .ja{
 button .nei{
     color: white;
     background-color: red;
+
 }
 #picture {
-        text-align-last: center;
-        position: relative;
-				transform-origin: 50% 99%;
+	width: 50%;
+  height: 60%;
+	position: relative;
+  text-align: center;
+	left: 25%;
+	display: block;
+	transform-origin: 50% 99%;
 }
 .text {
     display: flex;
-    text-align-last: center;
-    margin: 1em;
+    margin: 2em;
     font-family: 'Bitter', serif;
     position: absolute;
-    /* top: 512px; */
-    font-size: 4em;
-    /* justify-content: left; */
-    left: 40px;
-    bottom: 23px;
+    font-size: 3em;
+		left: 20%;
+    bottom: 120px;
 }
 .textp{
-    font-size: 40px;
-    font-family: 'Bitter', serif;
-    position: absolute;
-    bottom: -56px;
-    left: 115px;
+	display: flex;
+	margin: 2em;
+	font-family: 'Bitter', serif;
+	position: absolute;
+	font-size: 2em;
+	left: 25%;
+	bottom: 110px;
 }
 .textp2{
-    font-size: 40px;
-    font-family: 'Bitter', serif;
-    position: absolute;
-    bottom: -101px;
-    left: 115px;
+	display: flex;
+	margin: 2em;
+	font-family: 'Bitter', serif;
+	position: absolute;
+	font-size: 2em;
+	left: 25%;
+	bottom: 70px;
 }
 .textp3{
-    font-size: 40px;
-    font-family: 'Bitter', serif;
-    position: absolute;
-    bottom: -7px;
-    left: 115px;
+	display: flex;
+	margin: 2em;
+	font-family: 'Bitter', serif;
+	position: absolute;
+	font-size: 2em;
+	left: 25%;
+	bottom: 30px;
 }
 #Grupper {
-	    display: flex;
+	  display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Bitter', serif;
@@ -153,7 +168,49 @@ img[src="studybuddylogo.png"] {
     height: 25%;
     width: 18%;
 }
+/* Swipe stuff and anim for switching between menus/pages */
 body{
    opacity: 0;
-   transition: opacity .5s;
+	 transition: opacity 0.5s forwards;
+   /* animation: visible .5s forwards; */
+}
+.people.yes .card {
+	animation: yay 0.7s ease-out;
+}
+.people.nope .card {
+	animation: nope 0.7s ease-out;
+}
+#picture.card {
+	display: none;
+}
+#picture.current {
+	display: block;
+}
+@keyframes visible {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes yay {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+@keyframes nope {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
 }

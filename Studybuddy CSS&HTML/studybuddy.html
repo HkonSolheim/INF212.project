@@ -23,40 +23,124 @@
 				<h2><span onclick="transitionToPage('minprofil.html')">Min Profil</span></h2>
 			</div>
 	</nav>
-	<div id="picture">
-		<img src="olanordmann.jpeg" alt="Cartoon of Ola.Nordmann">
-			<h1 class="text">
-				Ola Nordmann
-			</h1>
-			<p class="textp">
-				Studerer: Info 212
-			</p>
-			<p class="textp2">
-				Søker: Studiepartner(e)
-			</p>
-			<p class="textp3">
-				Litt om meg selv:
-			</p>
-		</div>
-	<div id="valg">
-		<div class="nei">
-			<button class="nei" onclick="X">X</button>
-		</div>
-		<div class="ja">
-			<button class="ja" onclick="✓">✓</button>
+	<div class="people">
+		<ul class="peoplelist">
+			<li id="picture" class="current">
+				<img src="olanordmann.jpeg" alt="Cartoon of Ola.Nordmann">
+				<h1 class="text">
+					Ola Nordmann
+				</h1>
+				<p class="textp">
+					Studerer: Info 212
+				</p>
+				<p class="textp2">
+					Søker: Studiepartner(e)
+				</p>
+				<p class="textp3">
+					Litt om meg selv:
+				</p>
+			</li>
+			<li id="picture" class="card">
+				<img src="olanordmann.jpeg" alt="Cartoon of Ola.Nordmann">
+				<h1 class="text">
+					Ola Nordmann
+				</h1>
+				<p class="textp">
+					Studerer: Info 212
+				</p>
+				<p class="textp2">
+					Søker: Studiepartner(e)
+				</p>
+				<p class="textp3">
+					Litt om meg selv:
+				</p>
+			</li>
+			<li id="picture" class="card">
+				<img src="olanordmann.jpeg" alt="Cartoon of Ola.Nordmann">
+				<h1 class="text">
+					Ola Nordmann
+				</h1>
+				<p class="textp">
+					Studerer: Info 212
+				</p>
+				<p class="textp2">
+					Søker: Studiepartner(e)
+				</p>
+				<p class="textp3">
+					Litt om meg selv:
+				</p>
+			</li>
+		</ul>
+		<div id="valg">
+			<div>
+				<button class="nei">X</button>
+			</div>
+			<div  class="divider">
+			</div>
+			<div>
+				<button class="ja">✓</button>
+			</div>
 		</div>
 	</div>
-<script>
-window.transitionToPage = function(href) {
-    document.querySelector('body').style.opacity = 0
-    setTimeout(function() {
-        window.location.href = href
-    }, 500)
-}
+	<script>
+	window.transitionToPage = function(href) {
+	    document.querySelector('body').style.opacity = 0
+	    setTimeout(function() {
+	        window.location.href = href
+	    }, 500)
+	}
 
-document.addEventListener('DOMContentLoaded', function(event) {
-    document.querySelector('body').style.opacity = 1
-})
-</script>
+	document.addEventListener('DOMContentLoaded', function(event) {
+	document.querySelector('body').style.opacity = 1
+	})
+	function animatecard(ev) {
+  var t = ev.target;
+  if (t.className === 'nei') {
+    t.parentNode.parentNode.parentNode.classList.add('nope');
+  }
+  if (t.className === 'ja') {
+    t.parentNode.parentNode.parentNode.classList.add('yes');
+  }
+}
+document.body.addEventListener('click', animatecard);
+function animationdone(ev) {
+
+  // get the container
+  var origin = ev.target.parentNode;
+
+  // remove the appropriate class
+  // depending on the animation name
+  if (ev.animationName === 'yay') {
+    origin.classList.remove('yes');
+  }
+  if (ev.animationName === 'nope') {
+    origin.classList.remove('nope');
+  }
+
+  // if any of the card events have
+  // ended…
+  if (ev.animationName === 'nope' ||
+      ev.animationName === 'yay') {
+
+  // remove the first card in the element
+    origin.querySelector('.current').remove();
+
+  // if there are no cards left, do nothing
+    if (!origin.querySelector('#picture')) {
+      // no more cards left -
+      // TODO other functionality
+    } else {
+
+  // otherwise shift the 'current' class to
+  // the next card
+      origin.querySelector('#picture').
+        classList.add('current');
+    }
+  }
+}
+document.body.addEventListener(
+  'animationend', animationdone
+);
+	</script>
 </body>
 </html>
