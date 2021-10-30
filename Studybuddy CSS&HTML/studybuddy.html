@@ -94,15 +94,19 @@
 	document.querySelector('body').style.opacity = 1
 	})
 	function animatecard(ev) {
-  var t = ev.target;
-  if (t.className === 'nei') {
-    t.parentNode.parentNode.parentNode.classList.add('nope');
-  }
-  if (t.className === 'ja') {
-    t.parentNode.parentNode.parentNode.classList.add('yes');
-  }
-}
-document.body.addEventListener('click', animatecard);
+  	var t = ev.target;
+		const regex_yes = new RegExp("(^| )ja($| )");
+		const	regex_no = new RegExp("(^| )nei($| )");
+  	if (regex_no.test(t.className)) {
+    	t.parentNode.parentNode.parentNode.classList.add('nope');
+  	}
+  	if (regex_yes.test(t.className)) {
+    	t.parentNode.parentNode.parentNode.classList.add('yes');
+  	}
+	}
+document.getElementsByClassName("nei")[0].addEventListener('click', animatecard);
+document.getElementsByClassName("ja")[0].addEventListener('click', animatecard);
+
 function animationdone(ev) {
 
   // get the container
@@ -138,9 +142,8 @@ function animationdone(ev) {
     }
   }
 }
-document.body.addEventListener(
-  'animationend', animationdone
-);
+document.body.addEventListener("webkitAnimationEnd", animationdone);
+document.body.addEventListener('animationend', animationdone);
 	</script>
 </body>
 </html>

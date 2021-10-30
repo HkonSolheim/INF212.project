@@ -31,7 +31,7 @@ img[src="olanordmann.jpeg"] {
 	padding: 4em;
     margin-top: 2em;
 	position: absolute;
-	top: 135%;
+	top: 140%;
 	left: 37%;
 }
 .divider {
@@ -71,6 +71,7 @@ button .nei{
   text-align: center;
 	left: 25%;
 	display: block;
+	-webkit-transform-origin: 50% 99%;
 	transform-origin: 50% 99%;
 }
 .text {
@@ -172,13 +173,6 @@ img[src="studybuddylogo.png"] {
 body{
    opacity: 0;
 	 transition: opacity 0.5s forwards;
-   /* animation: visible .5s forwards; */
-}
-.people.yes .card {
-	animation: yay 0.7s ease-out;
-}
-.people.nope .card {
-	animation: nope 0.7s ease-out;
 }
 #picture.card {
 	display: none;
@@ -186,13 +180,13 @@ body{
 #picture.current {
 	display: block;
 }
-@keyframes visible {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+.people.yes .current {
+	-webkit-animation: yay 0.7s ease-out;
+	animation: yay 0.7s ease-out;
+}
+.people.nope .current {
+	-webkit-animation: nope 0.7s ease-out;
+	animation: nope 0.7s ease-out;
 }
 @keyframes yay {
   from {
@@ -204,6 +198,16 @@ body{
     opacity: 0;
   }
 }
+@-webkit-keyframes yay {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
 @keyframes nope {
   from {
     transform: rotate(0deg);
@@ -211,6 +215,16 @@ body{
   }
   to {
     transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes nope {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(-40deg) translateY(-80px);
     opacity: 0;
   }
 }
