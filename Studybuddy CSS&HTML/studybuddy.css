@@ -1,7 +1,7 @@
 h1 {
-	    text-align-last: center;
+	  text-align-last: center;
     height: 60px;
-    font-size: 111px;
+    font-size: 80px;
 }
 nav {
     display: flex;
@@ -18,24 +18,23 @@ a {
 	color: black;
 }
 img[src="olanordmann.jpeg"] {
-	background-size: cover;
+		background-size: contain;
     align-content: center;
-    width: 800px;
-    height: 900px;
+    width: auto;
+    height: auto;
     padding: 1em;
 }
 #valg {
-	display: flex;
-	flex-flow: row;
-	justify-content: space-around;
-	padding: 4em;
-    margin-top: 2em;
-	position: absolute;
-	top: 140%;
-	left: 37%;
+	display: grid;
+	grid-template-rows: 10%;
+	grid-template-columns: 5% 10%;
+	grid-auto-flow: column;
+	padding: 1em;
+	position: relative;
+	left: 40%;
 }
 .divider {
-	width: 150px;
+	width: 1%;
 	height: auto;
 	display: inline-block;
 }
@@ -69,7 +68,7 @@ button .nei{
   height: 60%;
 	position: relative;
   text-align: center;
-	left: 25%;
+	left: 24%;
 	display: block;
 	-webkit-transform-origin: 50% 99%;
 	transform-origin: 50% 99%;
@@ -80,8 +79,8 @@ button .nei{
     font-family: 'Bitter', serif;
     position: absolute;
     font-size: 3em;
-		left: 20%;
-    bottom: 130px;
+		left: 8.5%;
+    bottom: 13%;
 }
 .textp{
 	display: flex;
@@ -89,8 +88,8 @@ button .nei{
 	font-family: 'Bitter', serif;
 	position: absolute;
 	font-size: 2em;
-	left: 25%;
-	bottom: 110px;
+	left: 23%;
+	bottom: 14%;
 }
 .textp2{
 	display: flex;
@@ -98,8 +97,8 @@ button .nei{
 	font-family: 'Bitter', serif;
 	position: absolute;
 	font-size: 2em;
-	left: 25%;
-	bottom: 70px;
+	left: 23%;
+	bottom: 9%;
 }
 .textp3{
 	display: flex;
@@ -107,8 +106,8 @@ button .nei{
 	font-family: 'Bitter', serif;
 	position: absolute;
 	font-size: 2em;
-	left: 25%;
-	bottom: 30px;
+	left: 23%;
+	bottom: 4%;
 }
 #Grupper {
 	  display: flex;
