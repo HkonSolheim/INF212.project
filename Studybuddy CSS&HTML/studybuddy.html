@@ -43,7 +43,7 @@
 			<li id="picture" class="card">
 				<img src="olanordmann.jpeg" alt="Cartoon of Ola.Nordmann">
 				<h1 class="text">
-					Ola Nordmann
+					Philip Haraldson
 				</h1>
 				<p class="textp">
 					Studerer: Info 212
@@ -58,7 +58,7 @@
 			<li id="picture" class="card">
 				<img src="olanordmann.jpeg" alt="Cartoon of Ola.Nordmann">
 				<h1 class="text">
-					Ola Nordmann
+					Benny boy barista
 				</h1>
 				<p class="textp">
 					Studerer: Info 212
@@ -98,10 +98,10 @@
 		const regex_yes = new RegExp("(^| )ja($| )");
 		const	regex_no = new RegExp("(^| )nei($| )");
   	if (regex_no.test(t.className)) {
-    	t.parentNode.parentNode.parentNode.classList.add('nope');
+    	document.getElementsByClassName('current')[0].classList.add('nope');
   	}
   	if (regex_yes.test(t.className)) {
-    	t.parentNode.parentNode.parentNode.classList.add('yes');
+    	document.getElementsByClassName('current')[0].classList.add('yes');
   	}
 	}
 document.getElementsByClassName("nei")[0].addEventListener('click', animatecard);

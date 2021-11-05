@@ -76,12 +76,12 @@ button .nei{
 }
 .text {
     display: flex;
-    margin: 2em;
+    margin: 3em;
     font-family: 'Bitter', serif;
     position: absolute;
     font-size: 3em;
 		left: 20%;
-    bottom: 120px;
+    bottom: 130px;
 }
 .textp{
 	display: flex;
@@ -180,11 +180,11 @@ body{
 #picture.current {
 	display: block;
 }
-.people.yes .current {
+#picture.yes.current {
 	-webkit-animation: yay 0.7s ease-out;
 	animation: yay 0.7s ease-out;
 }
-.people.nope .current {
+#picture.current.nope{
 	-webkit-animation: nope 0.7s ease-out;
 	animation: nope 0.7s ease-out;
 }
