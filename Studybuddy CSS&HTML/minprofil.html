@@ -5,36 +5,42 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
 	<title>Study Buddy</title>
 	<link rel="stylesheet" type="text/css" href="studybuddy.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h1>Study Buddy</h1>
+	<div id="logo">
+		<img src="studybuddylogo.png">
+	</div>
 	<nav>
 			<div class="nav1">
 				<h2><span onclick="transitionToPage('studybuddy.html')">Swipe</span></h2>
 			</div>
 			<div class="nav2">
 				<h2>Min Profil</h2>
-				<h3 style="text-align-last:center;"><button onclick="passchangefunc()" style="height:135px;width:135px;">Endre Passord</button></h3>
-				<div id="passchange" style="display:none;">
-					<h3 style="text-align-last:center;">Gammelt Passord</h3>
-					<input type="text" name="oldpass">
-					<br></br>
-					<h3 style="text-align-last:center;">Nytt Passord</h3>
-					<input type="text" name="newpass">
-					<br></br>
-				</div>
-				<h3 style="text-align-last:center;"><a button type="button"> Endre Profilbilde</a></h3>
-					<input type="file" name="profilepic" accept="image/*">
-				<h3 style="text-align-last:center;"><a> Rediger Biografi</a></h3>
-				<div class="biografi" style="">
-					<textarea name="biografi" rows="15" cols="80"></textarea>
-				</div>
 			</div>
 			<div class="nav3">
 				<h2><span onclick="transitionToPage('grupper.html')">Grupper</span></h2>
 			</div>
-
 	</nav>
+<div class="profile">
+	<button onclick="passchangefunc()" class="passchange">Endre Passord</button>
+	<div id="passchange" style="display:none;">
+		<h3>Gammelt Passord</h3>
+		<input type="text" name="oldpass">
+		<br></br>
+		<h3>Nytt Passord</h3>
+		<input type="text" name="newpass">
+		<br></br>
+	</div>
+	<h3><a button type="button"> Endre Profilbilde</a></h3>
+		<input type="file" name="profilepic" accept="image/*">
+	<h3><a> Rediger Biografi</a></h3>
+	<div class="biografi" style="">
+		<textarea name="biografi" rows="15" cols="80"></textarea>
+	</div>
+	</div>
 <script>
 // Enkel funksjon som gjer at menyen for å endre passord visast berre etter at ein trykkar på knappen
 function passchangefunc() {

@@ -6,16 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="studybuddy.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="logo">
-	<img src="studybuddylogo.png">
-</div>
+	<div id="logo">
+		<img src="studybuddylogo.png">
+	</div>
 	<nav>
 			<div class="nav1">
-				<h2><span onclick="transitionToPage('grupper.html')" id="left">Grupper</span></h2>
+				<h2><span onclick="transitionToPage('grupper.html')">Grupper</span></h2>
 			</div>
 			<div class="nav2">
 				<h2>Swipe</h2>
@@ -71,16 +71,40 @@
 					Litt om meg selv:
 				</p>
 			</li>
+			<li id="picture" class="card">
+				<img src="olanordmann.jpeg" alt="Cartoon of Ola.Nordmann">
+				<h1 class="text">
+					Geir Løvestake
+				</h1>
+				<p class="textp">
+					Studerer: Info 212
+				</p>
+				<p class="textp2">
+					Søker: Studiepartner(e)
+				</p>
+				<p class="textp3">
+					Litt om meg selv:
+				</p>
+			</li>
+			<li id="picture" class="card">
+				<img src="olanordmann.jpeg" alt="Cartoon of Ola.Nordmann">
+				<h1 class="text">
+					Harry Hårfagre
+				</h1>
+				<p class="textp">
+					Studerer: Info 212
+				</p>
+				<p class="textp2">
+					Søker: Studiepartner(e)
+				</p>
+				<p class="textp3">
+					Litt om meg selv:
+				</p>
+			</li>
 		</ul>
 		<div id="valg">
-			<div>
-				<button class="nei">X</button>
-			</div>
-			<div  class="divider">
-			</div>
-			<div>
-				<button class="ja">✓</button>
-			</div>
+			<button class="nei">X</button>
+			<button class="ja">✓</button>
 		</div>
 	</div>
 	<script>
@@ -112,14 +136,14 @@ function animationdone(ev) {
 
   // get the container
   var origin = ev.target.parentNode;
-
+	var removecard = origin.querySelector('.current')
   // remove the appropriate class
   // depending on the animation name
   if (ev.animationName === 'yay') {
-    origin.classList.remove('yes');
+    removecard.classList.remove('yes');
   }
   if (ev.animationName === 'nope') {
-    origin.classList.remove('nope');
+    removecard.classList.remove('nope');
   }
 
   // if any of the card events have
@@ -128,7 +152,10 @@ function animationdone(ev) {
       ev.animationName === 'yay') {
 
   // remove the first card in the element
-    origin.querySelector('.current').remove();
+		origin.appendChild(removecard)
+		removecard.classList.remove("current")
+		removecard.classList.add("card")
+
 
   // if there are no cards left, do nothing
     if (!origin.querySelector('#picture')) {
