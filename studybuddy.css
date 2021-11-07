@@ -1,0 +1,222 @@
+h1 {
+	  text-align-last: center;
+}
+nav {
+display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding: .5em;
+    margin: 0;
+    justify-content: space-evenly;
+    /* font-size: 180%; */
+    font-family: 'Bitter', serif;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+img[src="olanordmann.jpeg"] {
+		background-size: contain;
+    align-content: center;
+    width: auto;
+    height: auto;
+    padding: 1em;
+}
+#valg {
+	display: grid;
+	grid-template-rows: 370%;
+	grid-template-columns: 8% 8%;
+	grid-auto-flow: row;
+	grid-column-gap: 10%;
+	padding: 0.5em;
+	position: relative;
+	left: 42%;
+	margin-right: 40%;
+}
+.ja {
+		border-radius: 50%;
+    color: white;
+    background-color: green;
+}
+.nei {
+		border-radius: 50%;
+    color: white;
+    background-color: red;
+}
+.passchange {
+	border-radius: 50%;
+}
+.profile {
+position: relative;
+    /* left: 40%; */
+    font-family: 'Bitter', serif;
+    text-align-last: center;
+}
+button .ja{
+    color: white;
+    background-color: green;
+}
+button .nei{
+    color: white;
+    background-color: red;
+}
+.text {
+    display: flex;
+    margin: 3em;
+    font-family: 'Bitter', serif;
+    position: absolute;
+    font-size: 3em;
+		left: 8.5%;
+    bottom: 13%;
+}
+.textp{
+	display: flex;
+	margin: 2em;
+	font-family: 'Bitter', serif;
+	position: absolute;
+	font-size: 2em;
+	left: 23%;
+	bottom: 14%;
+}
+.textp2{
+	display: flex;
+	margin: 2em;
+	font-family: 'Bitter', serif;
+	position: absolute;
+	font-size: 2em;
+	left: 23%;
+	bottom: 9%;
+}
+.textp3{
+	display: flex;
+	margin: 2em;
+	font-family: 'Bitter', serif;
+	position: absolute;
+	font-size: 2em;
+	left: 23%;
+	bottom: 4%;
+}
+#Grupper {
+	  display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Bitter', serif;
+}
+h2 {
+	text-align-last: center;
+}
+.gruppe1 {
+	width: 100%;
+    padding: 1em;
+    margin-left: 3em;
+    border: lightblue;
+    margin: 1em;
+}
+.gruppe2 {
+	width: 100%;
+    padding: 1em;
+    margin-left: 3em;
+    border: lightblue;
+    margin: 1em;
+}
+.gruppe3 {
+	width: 100%;
+    padding: 1em;
+    margin-left: 3em;
+    border: lightblue;
+    margin: 1em;
+}
+.gruppe4 {
+	width: 100%;
+    padding: 1em;
+    margin-left: 3em;
+    border: lightblue;
+    margin: 1em;
+}
+.gruppe4, .gruppe3, .gruppe1, .gruppe2{
+width: 75%;
+    padding: 2em;
+    margin-left: 1em;
+    border: lightblue;
+    border-width: medium;
+    background-color: cornflowerblue;
+}
+#Grupper h2{
+    width: 100%;
+    font-size: 3em;
+}
+#logo {
+    display: flex;
+    justify-content: center;
+}
+img[src="studybuddylogo.png"] {
+    max-inline-size: -webkit-fill-available;
+    height: 25%;
+    width: 18%;
+}
+/* Swipe stuff and anim for switching between menus/pages */
+body{
+   opacity: 0;
+	 width: 100vw;
+}
+#picture.card {
+	display: none;
+}
+#picture.current {
+	width: 50%;
+	height: 60%;
+	position: relative;
+	text-align: center;
+	left: 24%;
+	display: block;
+	-webkit-transform-origin: 50% 99%;
+	transform-origin: 50% 99%;
+}
+#picture.yes.current {
+	-webkit-animation: yay 0.7s ease-out;
+	animation: yay 0.7s ease-out;
+}
+#picture.current.nope{
+	-webkit-animation: nope 0.7s ease-out;
+	animation: nope 0.7s ease-out;
+}
+@keyframes yay {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes yay {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+@keyframes nope {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes nope {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Study Buddy</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
+	<link rel="stylesheet" type="text/css" href="studybuddy.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="logo">
+	<img src="studybuddylogo.png">
+	</div>
+	<nav>
+			<div class="nav1">
+				<h2><span onclick="transitionToPage('grupper.html')">Grupper</span></h2>
+			</div>
+			<div class="nav3">
+				<h2><span onclick="transitionToPage('studybuddy.html')">Swipe</span></h2>
+			</div>
+				<h2><span onclick="transitionToPage('minprofil.html')">Min Profil</span></h2>
+			</div>
+	</nav>
+		<div id="Grupper">
+				<h2>Mine Grupper</h2>
+			<div class="gruppe1">
+				<h3>Info 212 kollokvie gruppe</h3>
+				<p>Deltakere: Fillip, Jonas, Knut, Josefine</p>
+			</div>
+			<div class="gruppe2">
+				<h3>Dikult 105 oppgaveløsning</h3>
+				<p>Deltakere: Daniel, Hermine, Harry, Ron</p>
+			</div>
+			<div class="gruppe3">
+				<h3>Info 162 Prosjekt</h3>
+				<p>Deltakere: Selina, Anne, Juli</p>
+			</div>
+			<div class="gruppe4">
+				<h3>Studieveiledning - Kogvit 101</h3>
+				<p>Deltakere: Ragna, Heidi, Jørgen, Tobias</p>
+			</div>
+		</div>
+<script>
+window.transitionToPage = function(href) {
+	document.querySelector('body').style.opacity = 0
+	setTimeout(function() {
+			window.location.href = href
+	}, 500)
+}
+
+	document.addEventListener('DOMContentLoaded', function(event) {
+	document.querySelector('body').style.opacity = 1
+})
+</script>
+</body>
+</html>
